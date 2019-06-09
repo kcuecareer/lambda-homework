@@ -7,7 +7,7 @@ function AvengersList() {
     <div>
       {/* Loop over avengers data using .map() */}
       {avengers.map(avenger => (
-        <div className="card text-dark my-5" style={{ width: '18rem' }}>
+        <div className="card text-dark m-5">
           <img
             src={avenger.thumbnail}
             className="card-img-top"
