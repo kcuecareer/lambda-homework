@@ -1,11 +1,28 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home';
+import AvengersList from './components/AvengersList';
+import avengers from './data.js';
 
 class App extends Component {
+  // set the data equal to the state of my component
+  constructor() {
+    super();
+    this.state = {
+      avengers: avengers
+    };
+  }
+
+  // Now I need to pass that state to my AvengersList component and I do that by importing it in that file...so go to that file now..
+
   render() {
-    return <div className="App">
-      
-    </div>;
+    return (
+      <div className="App">
+        <Route exact path="/" component={Home} />
+        <Route path="/avengers" component={AvengersList} />
+      </div>
+    );
   }
 }
 
